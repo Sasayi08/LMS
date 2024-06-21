@@ -1,16 +1,14 @@
-package org.example.nettexpenses;
+package org.example.dashboard;
 
 import com.google.common.collect.ImmutableList;
 import io.javalin.http.Context;
 import org.example.app.db.DataRepository;
-import org.example.app.model.Book;
 import org.example.app.model.Claim;
 import org.example.app.model.Person;
 
 import java.util.Map;
-import java.util.Optional;
 
-public class NettExpensesController {
+public class Dashboard {
 
     public static final String PATH = "/home";
 

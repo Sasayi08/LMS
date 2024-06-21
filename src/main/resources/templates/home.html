@@ -129,24 +129,10 @@
                            th:text="${claim.title}">Lunch</a>
                     </td>
                     <td class="text" th:text="${claim.claimedBy.name}">Sett</td>
-
-                    <td class="date" th:text="${claim.dueDate}">2021/11/15</td>
-                    <td class="money" th:text="${#numbers.formatDecimal(claim.amount,1,2,'POINT')}">150.00</td>
                 </tr>
             </th:block>
             </tbody>
-            <tfoot>
-            <tr>
-                <td colspan="3"></td>
-                <td id="i_owe_them_total" class="total"
-                    th:text="${#numbers.formatDecimal(totalIOwe,1,2,'POINT')}">200.00</td>
-            </tr>
-            </tfoot>
         </table>
-    </section>
-    <section class="nettExpenses" th:unless="${nettExpenses eq 0.00}">
-        <div id="nett_expenses"
-             th:text="${#numbers.formatDecimal(nettExpenses,1,2,'POINT')}">450.00</div>
     </section>
     </main>
 </div>

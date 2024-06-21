@@ -6,7 +6,7 @@ import org.example.app.InitializeApp;
 import org.example.app.db.DataRepository;
 import org.example.app.model.Genre;
 import org.example.app.model.Person;
-import org.example.nettexpenses.NettExpensesController;
+import org.example.dashboard.Dashboard;
 import org.example.app.model.Author;
 import org.example.app.model.Book;
 
@@ -27,7 +27,7 @@ public class LoginController {
         context.sessionAttribute("user", person);
 
 
-        context.redirect(NettExpensesController.PATH);
+        context.redirect(Dashboard.PATH);
         InitializeApp __app_init = new InitializeApp();
         __app_init.loadTheBooks(person);
         addBooks(person);

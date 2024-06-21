@@ -1,16 +1,13 @@
 package org.example;
 
 import io.javalin.Javalin;
-import io.javalin.http.Context;
 import io.javalin.http.staticfiles.Location;
 import org.example.app.DefaultAccessManager;
-import org.example.app.InitializeApp;
 import org.example.app.Sessions;
-import org.example.app.model.Person;
 import org.example.claim.ClaimExpenseController;
 import org.example.claim.ClaimsApiController;
 import org.example.login.LoginController;
-import org.example.nettexpenses.NettExpensesController;
+import org.example.dashboard.Dashboard;
 import org.example.settle.SettlementViewController;
 import org.jetbrains.annotations.NotNull;
 import io.javalin.plugin.rendering.template.JavalinThymeleaf;
@@ -20,10 +17,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
-import io.javalin.Javalin;
-import io.javalin.http.staticfiles.Location;
 import io.javalin.plugin.rendering.JavalinRenderer;
-import io.javalin.plugin.rendering.template.JavalinThymeleaf;
 
 public class LibServer {
 
@@ -64,7 +58,7 @@ public class LibServer {
     }
 
     private void homePageRoute() {
-        path(NettExpensesController.PATH, () -> get(NettExpensesController::renderHomePage));
+        path(Dashboard.PATH, () -> get(Dashboard::renderHomePage));
     }
 
     private static void claimRoutes() {
