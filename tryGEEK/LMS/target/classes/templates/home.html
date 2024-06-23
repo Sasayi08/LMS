@@ -35,7 +35,7 @@
     </section>
 
 
-    <section class="expenseList">
+    <section class="expenseList" th:if="${!admin}" >
         <h2>My books</h2>
         <hr>
         <a id="add_expense" href="/newexpense">request a book</a>
@@ -73,7 +73,8 @@
             </tfoot>
         </table>
     </section>
-    <section class="expenseList">
+
+    <section class="expenseList" th:if="${!admin}">
         <h2>Books on their way</h2>
         <hr>
         <p id="nobody_owes" th:if="${#lists.isEmpty(owedToMe)}">No books!</p>
