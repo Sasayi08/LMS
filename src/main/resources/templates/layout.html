@@ -12,12 +12,26 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>Geeky Library</h1>
-    <p id="user" th:text="${session.user.email}">person@domain.com</p>
+
+<header>
     <nav>
-        <a href="/home">Home</a>
-        <a href="/logout" id="logout" th:text="'Logout ' + ${session.user.name}">Logout Person</a>
+        <div class="navbar">
+            <div class="logo">
+                <img class="imag" src="logo2.png" alt="">
+            </div>
+            <input type="text" class="search-bar" placeholder="Search for books...">
+            <p id="user" th:text="${session.user.email}">person@domain.com</p>
+        </div>
+
     </nav>
+</header>
+
+
+    <nav>
+        <a href="/logout" id="logout" th:text="'Logout ' + ${session.user.name}">Logout Person</a>
+        <a href="/home">Home</a>
+    </nav>
+
 
     <main>
         <div layout:fragment="contents">
