@@ -21,9 +21,11 @@ public class Dashboard {
 
         System.out.println("allLibBooks: " + DataRepository.getInstance().getAllLibraryBooks());
 
+        currentPerson.isAdmin();
 
         Map<String, Object> viewModel =
-                Map.of( "libraryBooks", DataRepository.getInstance().getAllLibraryBooks(),
+                Map.of( "admin", currentPerson.isAdmin(),
+                        "libraryBooks", DataRepository.getInstance().getAllLibraryBooks(),
                         "books", DataRepository.getInstance().getAllBooks(),
                         "expenses", DataRepository.getInstance().getExpenses(currentPerson),
 //                       "totalExpenses", DataRepository.getInstance().getTotalExpensesFor(currentPerson),

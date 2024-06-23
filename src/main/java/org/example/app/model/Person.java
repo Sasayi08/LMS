@@ -23,6 +23,18 @@ public class Person {
         this.email = checkNotNull( email );
     }
 
+    public boolean isAdmin() {
+        Boolean isAdmin = false;
+
+        if (getName().equals("Admin")) {
+            System.out.println("checking");
+            isAdmin = true;
+        }
+        System.out.println("This is the value of isAdmin: " + isAdmin);
+        System.out.println(getName());
+        return isAdmin;
+    }
+
     public String getEmail(){
         return email;
     }

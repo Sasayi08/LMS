@@ -30,7 +30,6 @@ public class LoginController {
         context.redirect(Dashboard.PATH);
         InitializeApp __app_init = new InitializeApp();
         __app_init.loadTheBooks(person);
-        addBooks(person);
     }
 
     public static void handleLogout(Context context) {
@@ -38,16 +37,5 @@ public class LoginController {
         context.redirect(ROOT_PATH);
     }
 
-    public static void addBooks(Person person) {
-        System.out.println(" This is person in add books: "+ person);
-        Author author = new Author("Hnnie", "Hamsworth");
-        Genre genre = new Genre("Sci", "Science");
-        Author author2 = new Author("me", "alle");
-        Genre genre2 = new Genre("Bio", "Biography");
-        DataRepository.getInstance().addBook(new Book("how water flows", genre, author, person ));
-        DataRepository.getInstance().addBook(new Book("amazed", genre2, author2, person ));
 
-        ImmutableList<Book> allBooks = DataRepository.getInstance().getAllBooks();
-
-    }
 }
