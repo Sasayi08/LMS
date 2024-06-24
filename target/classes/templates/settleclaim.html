@@ -5,22 +5,19 @@
 <body>
 <div layout:fragment="contents">
     <main>
-        <h2>Settle a claim</h2>
+        <h2>Send Book</h2>
 
         <section>
             <form enctype="application/x-www-form-urlencoded" method="post" th:action="@{/settleclaim}">
                 <input type="hidden" name="id" th:value="${claim.id}">
-                <label for="email">You want to settle a claim from</label>
+                <label for="email">Send to</label>
                 <input readonly disabled id="email" type="email" name="claimedBy" th:value="${claim.claimedBy.email}"/>
-                <label for="due_date">thas was due on</label>
+                <label for="due_date">Due on</label>
                 <input readonly disabled name="duedate" id="due_date" type="date" th:value="${claim.dueDate}" required>
                 <label for="description">for</label>
                 <input readonly disabled id="description" type="text" name="description"
                        th:value="${claim.expense.description}">
-                <label for="claim_amount">You owe</label>
-                <input readonly disabled id="claim_amount" type="number" name="claimAmount"
-                       th:value="${#numbers.formatDecimal(claim.amount,1,2,'POINT')}">
-                <input id="settle" type="submit" value="Settle"/>
+                <input id="send" type="submit" value="Send"/>
             </form>
         </section>
     </main>

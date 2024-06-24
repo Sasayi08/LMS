@@ -17,6 +17,7 @@
             <div>Fiction</div>
             <div>Software</div>
         </div>
+        <a th:if="${admin}" id="add_book" href="/newbook">Add a book</a>
         <hr>
         <div class="allBooks" id="allBooks" th:unless="${libraryBooks.empty}">
             <th:block th:each="book,iterStat: ${libraryBooks}">
@@ -35,41 +36,30 @@
         </div>
     </section>
     <section class="expenseList">
-        <h2>My books</h2>
+        <h2 th:if="${admin}">Books currently away</h2>
+        <h2 th:if="${!admin}">Books in my possession</h2>
         <hr>
-        <a id="add_expense" href="/newexpense">Request a book</a>
         <br>
         <table id="expenses" th:unless="${books.empty}">
             <thead>
             <tr>
                 <th>Title</th>
                 <th>Author</th>
-                <th class="money">Bluepoints</th>
             </tr>
             </thead>
             <tbody>
             <th:block th:each="book,iterStat: ${books}">
                 <tr>
                     <td th:text="${book.title}">Book Title</td>
-                    <td>
-                        <a th:id="'claim_expense' + ${iterStat.count}"
-                           href="#" th:href="@{/claimbook(expenseId=${book.id})}"
-                           th:text="${book.getGenre.description}">Author</a>
-                    </td>
-                    <td class="money" th:text="${#numbers.formatDecimal(book.bluePoints,1,2,'POINT')}">200.00</td>
-                </tr>
+                    <td th:text="${book.authorInitial}">Book Title</td>
+                    </tr>
             </th:block>
             </tbody>
-            <tfoot>
-            <tr class="total-row">
-                <td colspan="2">Total</td>
-                <td id="expenses_total" class="total" th:text="${#numbers.formatDecimal(totalExpenses,1,2,'POINT')}">200.00</td>
-            </tr>
-            </tfoot>
         </table>
     </section>
     <section class="expenseList">
-        <h2>Books on their way</h2>
+        <h2 th:if="${admin}">Books to collect</h2>
+        <h2 th:if="${!admin}">Books on their way</h2>
         <hr>
         <p id="nobody_owes" th:if="${#lists.isEmpty(owedToMe)}">No books!</p>
         <table id="they_owe_me" th:unless="${#lists.isEmpty(owedToMe)}">
@@ -98,9 +88,10 @@
         </table>
     </section>
     <section class="expenseList">
-        <h2>Books I owe</h2>
+        <h2 th:if="${admin}">Books to send</h2>
+        <h2 th:if="${!admin}">Books to return</h2>
         <hr>
-        <p id="owe_nobody" th:if="${#lists.isEmpty(owedToOthers)}">No Books Owed!</p>
+        <p id="owe_nobody" th:if="${#lists.isEmpty(owedToOthers)}">No Books!</p>
         <table id="i_owe_them" th:unless="${#lists.isEmpty(owedToOthers)}">
             <thead>
             <tr>
