@@ -49,7 +49,7 @@
         "lastname": "Cabell"
       },
       "genre": {
-        "code": "Fic",
+        "code": "nFic",
         "description": "Fiction"
       },
       "description":"Toresz is a dangerous place if you're a woman with a witchy skill—or a man in love with the wrong kind of woman. An unexpected guest arrives with an old legal claim, and Solace and Rhees part on bitter terms. As she travels homeward, everyone hails Solace as the Water Witch Queen. But when tragedy strikes, and Rhees needs her one last time, will Solace fight for the land—and man—she still loves?",
@@ -63,7 +63,7 @@
         "lastname": "Wright"
       },
       "genre": {
-        "code": "Fic",
+        "code": "nFic",
         "description": "Fiction"
       },
       "description":"She’s a lonely daydreamer until ancient powers transport her to another realm. Can she save a legendary kingdom from the approaching darkness? If you like quirky but legendary characters, myths with a twist, and fantasy with a dash of science fiction, then you’ll love this thrilling novel!",
@@ -77,7 +77,7 @@
         "lastname": "Chastain"
       },
       "genre": {
-        "code": "Fic",
+        "code": "nFic",
         "description": "Fiction"
       },
       "description":"While investigating the unrest of the local dryad population, a journalist and her gargoyle companion are swept into a terrifying conflict in this action-packed series starter from a USA Today bestselling author.",
@@ -96,6 +96,71 @@
       },
       "description":"Lauren Martin tells the untold stories of the different. Inspired by her life’s experiences, including the isolation she has suffered as a result both of living with chronic illness and having devoted herself to a religion outside the mainstream, these poems explore with raw vulnerability and unflinching honesty what it is to live apart.",
       "cover_image": "/images/night-of-the-hawk.jpg"
+    },
+    {
+      "title":"How To Help People Change: Four-Step Biblical Process",
+      "author": {
+        "firstname": "Jay E.",
+        "lastname": "Adams"
+      },
+      "genre": {
+        "code": "nFic",
+        "description": "nFiction"
+      },
+      "description":"Professor, pastor, and well-known counselor Jay E. Adams bases his whole approach on Scripture. This book provides an unparalleled opportunity to see how he discovers and applies biblical principles as well as the way in which Scripture functions as the basis for his counseling approach",
+      "cover_image": "/images/How To Help People Change.jpg"
+    },
+    {
+      "title":"Again, Rachel",
+      "author": {
+        "firstname": "Marian",
+        "lastname": "Keyes"
+      },
+      "genre": {
+        "code": "nFic",
+        "description": "nFiction"
+      },
+      "description":"Her particular gift is the ability to settle the reader into a comfortable seat, then carry them to the darkest places; to make serious things funny - and moving. She handles with intelligence and humour the issues that the question of long-term addiction recovery throws up ―",
+      "cover_image": "/images/Again, Rachel.jpg"
+    },
+    {
+      "title":"The Lost Book of Bonn",
+      "author": {
+        "firstname": "Brianna",
+        "lastname": "Labuskes"
+      },
+      "genre": {
+        "code": "Fic",
+        "description": "Fiction"
+      },
+      "description":"Germany, 1946: Emmy Clarke is a librarian not a soldier. But that doesn’t stop the Library of Congress from sending her overseas to Germany to help the Monuments Men retrieve and catalog precious literature that was plundered by the Nazis. The Offenbach Archival Depot and its work may get less attention than returning art to its rightful owners, but for Emmy, who sees the personalized messages on the inside of the books and the notes in margins of pages, it feels just as important.",
+      "cover_image": "/images/LostBook.jpg"
+    },
+    {
+      "title":"The Midnight Library: A GMA Book Club Pick (A Novel)",
+      "author": {
+        "firstname": "Matt",
+        "lastname": "Haig"
+      },
+      "genre": {
+        "code": "Fic",
+        "description": "Fiction"
+      },
+      "description":"The #1 New York Times bestselling WORLDWIDE phenomenon. Winner of the Goodreads Choice Award for Fiction | A Good Morning America Book Club Pick | Independent (London) Ten Best Books of the Year",
+      "cover_image": "/images/MidnightLibrary.jpg"
+    },
+    {
+      "title":"Anxious People: The No. 1 New York Times bestseller, now a Netflix TV Series",
+      "author": {
+        "firstname": "Fredrik",
+        "lastname": "Backman"
+      },
+      "genre": {
+        "code": "Fic",
+        "description": "Fiction"
+      },
+      "description":"The funny, touching and unpredictable No. 1 New York Times bestseller, now a major Netflix TV series",
+      "cover_image": "/images/AnxiousPeople.jpg"
     }
   ]
 }
