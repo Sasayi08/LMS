@@ -1,0 +1,8 @@
+FROM maven:3.9.8-eclipse-temurin-22-jammy AS build
+Copy . .
+RUN mvn clean package -DskipTests
+
+FROM openjdk:22-jdk-slim
+COPY --from=build /target/lms--0.0.1-SNAPSHORT.jar lms.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "lms.jar"]
